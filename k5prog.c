@@ -598,7 +598,8 @@ int wait_flash_message(int fd,int ntimes) {
 		 *  0x000020: 00 00 00 20                                       ...                
 		 */
 
-		if ((cmd->cmd[2]!=0x20)||(cmd->cmd[3]!=0x0)||(cmd->cmd[4]!=0x1)||(cmd->cmd[5]!=0x2)||(cmd->cmd[6]!=0x2)) {
+		//if ((cmd->cmd[2]!=0x20)||(cmd->cmd[3]!=0x0)||(cmd->cmd[4]!=0x1)||(cmd->cmd[5]!=0x2)||(cmd->cmd[6]!=0x2)) {
+		if ((cmd->cmd[2]!=0x20)||(cmd->cmd[3]!=0x0)||(cmd->cmd[4]!=0x1)||(cmd->cmd[5]!=0x2)||(cmd->cmd[6]!=0x3)) {			
 			printf("wait_flash_message: got unexpected packet contents\n");
 			destroy_k5_struct(cmd);
 			continue;
